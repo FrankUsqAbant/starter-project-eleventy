@@ -1,0 +1,28 @@
+---
+layout: layout-page.njk
+title: Pagina de inicio
+description: Meta descripcion de la pagina de inicio
+---
+
+<h1>{{ title }}</h1>
+
+<p>
+  Hola, este es un <i>starter porject</i> minimalista para crear sitios estaticos con <b><i>11ty</i></b> y desplegarlos en <i>GitHub Pages</i>.
+</p>
+<div>
+  <img src="/img/eleventy.svg" alt="Eleventy">
+  <h2>+</h2>
+  <img src="/img/github.svg" alt="GitHub">
+</div>
+<hr>
+<h2>{{ site.message }}</h2>
+<p>
+  Para sacarle mayor provecho a este <i>starter project</i>, te sugiero revisar los siguientes enlaces:
+</p>
+<ul>
+  {% for link in site.linksDoc %}
+    <li>
+      <a href="{{ link.url }}" target="_blank">{{ link.text | safe }}</a>
+    </li>
+  {% endfor %}
+</ul>
