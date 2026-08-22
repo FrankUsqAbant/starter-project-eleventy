@@ -3,69 +3,297 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina de Blog</title>
-  <meta name="description" content="Meta" descripcion="" de="" la="" pagina="" blog="">
-  <link rel="icon" href="/starter-project-eleventy/img/favicon.png">
-  <link rel="stylesheet" href="/starter-project-eleventy/css/styles.css">
+  <title>Blog &amp; Artículos — Eleventy Starter</title>
+  <meta name="description" content="Explora publicaciones, reseñas de libros y recomendaciones de películas generadas con colecciones de Eleventy.">
+  <link rel="icon" href="/img/favicon.png">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/styles.css">
 
+  <!-- Script temprano para evitar flash de tema -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
 </head>
 <body>
-  <header> 
-    <h2>Mi sitio con <i>11ty</i></h2>
-          <nav class="menu">
-      <ul>
-        <li><a href="/starter-project-eleventy/">Inicio</a></li>
-        <li><a href="/starter-project-eleventy/acerca">Acerca</a></li>
-        <li><a href="/starter-project-eleventy/contacto">Contacto</a></li>
-        <li><a href="/starter-project-eleventy/blog">Blog</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+  <div class="site-container header-inner">
+    <a href="/" class="brand-logo">
+      <div class="brand-icon">
+        <img src="/img/eleventy.svg" alt="Eleventy Logo">
+      </div>
+      <span>11ty Starter</span>
+      <span class="brand-badge">v2.0</span>
+    </a>
 
-    <img src="/starter-project-eleventy/img/eleventy.avif" alt="Mascotaa 11ty">
-  </header>
-  <main>
+    <nav class="nav-menu">
+  <ul class="nav-links">
+    <li><a href="/" class="nav-link ">Inicio</a></li>
+    <li><a href="/blog" class="nav-link active">Blog</a></li>
+    <li><a href="/acerca" class="nav-link ">Acerca</a></li>
+    <li><a href="/contacto" class="nav-link ">Contacto</a></li>
+  </ul>
+</nav>
+
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema de color">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <a href="https://github.com/FrankUsqAbant/starter-project-eleventy" target="_blank" rel="noopener noreferrer" class="github-btn" title="Ver repositorio en GitHub">
+        <img src="/img/github.svg" alt="GitHub" width="18" height="18">
+        <span>Repo</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+  <main class="site-container">
     
-<h1>Pagina de Blog</h1>
-<h2>Articulos del blog ordenados ascendentemente</h2>
-<ul>
+<div class="blog-header">
+  <h1>Blog &amp; Artículos</h1>
+  <p>Explora nuestras publicaciones organizadas por categorías con buscador y filtros en tiempo real.</p>
+</div>
+
+<!-- Barra interactiva de Búsqueda y Filtros -->
+<div class="blog-controls">
+  <div class="search-wrapper">
+    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input type="text" id="blog-search" class="search-input" placeholder="Buscar por título o contenido...">
+  </div>
+
+  <div class="category-pills">
+    <button class="cat-btn active" data-category="all">Todos (6)</button>
+    <button class="cat-btn" data-category="libros">Libros (3)</button>
+    <button class="cat-btn" data-category="peliculas">Películas (3)</button>
+  </div>
+</div>
+
+<!-- Grid de Artículos -->
+<div class="posts-grid" id="posts-container">
   
-    <li><a href="/starter-project-eleventy/libro-1/"> Resumen del libro 1 - 2024-02-22</a></li>
+    <div class="post-card post-card-item" 
+         data-title="blade runner 2049 — denis villeneuve" 
+         data-desc="una secuela magistral con una cinematografía deslumbrante de roger deakins que explora la identidad, los recuerdos y la humanidad."
+         data-category="peliculas">
+      
+      <div>
+        <div class="post-meta">
+          
+            <span class="post-tag tag-peliculas">Película</span>
+          
+          <span class="post-date">2024-07-20</span>
+        </div>
+
+        <h3>
+          <a href="/pelicula-3/">Blade Runner 2049 — Denis Villeneuve</a>
+        </h3>
+
+        <p>Una secuela magistral con una cinematografía deslumbrante de Roger Deakins que explora la identidad, los recuerdos y la humanidad.</p>
+      </div>
+
+      <div class="post-card-footer">
+        <a href="/pelicula-3/" style="display: flex; align-items: center; gap: 0.4rem;">
+          <span>Leer publicación</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
   
-    <li><a href="/starter-project-eleventy/libro-2/"> Resumen del libro 2 - 2024-02-22</a></li>
+    <div class="post-card post-card-item" 
+         data-title="the matrix — las hermanas wachowski" 
+         data-desc="el clásico cyberpunk revolucionario que redefinió el cine de acción, la filosofía digital y los efectos visuales."
+         data-category="peliculas">
+      
+      <div>
+        <div class="post-meta">
+          
+            <span class="post-tag tag-peliculas">Película</span>
+          
+          <span class="post-date">2024-06-18</span>
+        </div>
+
+        <h3>
+          <a href="/pelicula-2/">The Matrix — Las Hermanas Wachowski</a>
+        </h3>
+
+        <p>El clásico cyberpunk revolucionario que redefinió el cine de acción, la filosofía digital y los efectos visuales.</p>
+      </div>
+
+      <div class="post-card-footer">
+        <a href="/pelicula-2/" style="display: flex; align-items: center; gap: 0.4rem;">
+          <span>Leer publicación</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
   
-    <li><a href="/starter-project-eleventy/libro-3/"> Resumen del libro 3 - 2024-02-22</a></li>
+    <div class="post-card post-card-item" 
+         data-title="interstellar — christopher nolan" 
+         data-desc="una odisea visual y emocional sobre la física cuántica, el tiempo, los agujeros negros y la supervivencia humana."
+         data-category="peliculas">
+      
+      <div>
+        <div class="post-meta">
+          
+            <span class="post-tag tag-peliculas">Película</span>
+          
+          <span class="post-date">2024-05-04</span>
+        </div>
+
+        <h3>
+          <a href="/pelicula-1/">Interstellar — Christopher Nolan</a>
+        </h3>
+
+        <p>Una odisea visual y emocional sobre la física cuántica, el tiempo, los agujeros negros y la supervivencia humana.</p>
+      </div>
+
+      <div class="post-card-footer">
+        <a href="/pelicula-1/" style="display: flex; align-items: center; gap: 0.4rem;">
+          <span>Leer publicación</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
   
-    <li><a href="/starter-project-eleventy/pelicula-1/"> Resumen del pelicula 1 - 2024-02-22</a></li>
+    <div class="post-card post-card-item" 
+         data-title="the pragmatic programmer — david thomas &amp; andrew hunt" 
+         data-desc="consejos indispensables para transformar tu mentalidad de programador y elevar tu carrera técnica al siguiente nivel."
+         data-category="libros">
+      
+      <div>
+        <div class="post-meta">
+          
+            <span class="post-tag tag-libros">Libro</span>
+          
+          <span class="post-date">2024-04-10</span>
+        </div>
+
+        <h3>
+          <a href="/libro-3/">The Pragmatic Programmer — David Thomas &amp; Andrew Hunt</a>
+        </h3>
+
+        <p>Consejos indispensables para transformar tu mentalidad de programador y elevar tu carrera técnica al siguiente nivel.</p>
+      </div>
+
+      <div class="post-card-footer">
+        <a href="/libro-3/" style="display: flex; align-items: center; gap: 0.4rem;">
+          <span>Leer publicación</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
   
-    <li><a href="/starter-project-eleventy/pelicula-2/"> Resumen del peliculas 2 - 2024-02-22</a></li>
+    <div class="post-card post-card-item" 
+         data-title="clean code — robert c. martin" 
+         data-desc="principios fundamentales, patrones y buenas prácticas para escribir código legible, mantenible y profesional."
+         data-category="libros">
+      
+      <div>
+        <div class="post-meta">
+          
+            <span class="post-tag tag-libros">Libro</span>
+          
+          <span class="post-date">2024-03-15</span>
+        </div>
+
+        <h3>
+          <a href="/libro-2/">Clean Code — Robert C. Martin</a>
+        </h3>
+
+        <p>Principios fundamentales, patrones y buenas prácticas para escribir código legible, mantenible y profesional.</p>
+      </div>
+
+      <div class="post-card-footer">
+        <a href="/libro-2/" style="display: flex; align-items: center; gap: 0.4rem;">
+          <span>Leer publicación</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
   
-    <li><a href="/starter-project-eleventy/pelicula-3/"> Resumen del peliculas 3 - 2024-02-22</a></li>
+    <div class="post-card post-card-item" 
+         data-title="el arte de la guerra — sun tzu" 
+         data-desc="claves estratégicas sobre el liderazgo, la preparación mental y la toma de decisiones aplicadas al desarrollo de software y la vida."
+         data-category="libros">
+      
+      <div>
+        <div class="post-meta">
+          
+            <span class="post-tag tag-libros">Libro</span>
+          
+          <span class="post-date">2024-02-22</span>
+        </div>
+
+        <h3>
+          <a href="/libro-1/">El Arte de la Guerra — Sun Tzu</a>
+        </h3>
+
+        <p>Claves estratégicas sobre el liderazgo, la preparación mental y la toma de decisiones aplicadas al desarrollo de software y la vida.</p>
+      </div>
+
+      <div class="post-card-footer">
+        <a href="/libro-1/" style="display: flex; align-items: center; gap: 0.4rem;">
+          <span>Leer publicación</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
   
-</ul>
-<hr>
-<h2>Artículos del blog ordenados descendentemente</h2>
-<ul>
-  
-    <li><a href="/starter-project-eleventy/pelicula-3/"> Resumen del peliculas 3 - 2024-02-22</a></li>
-  
-    <li><a href="/starter-project-eleventy/pelicula-2/"> Resumen del peliculas 2 - 2024-02-22</a></li>
-  
-    <li><a href="/starter-project-eleventy/pelicula-1/"> Resumen del pelicula 1 - 2024-02-22</a></li>
-  
-    <li><a href="/starter-project-eleventy/libro-3/"> Resumen del libro 3 - 2024-02-22</a></li>
-  
-    <li><a href="/starter-project-eleventy/libro-2/"> Resumen del libro 2 - 2024-02-22</a></li>
-  
-    <li><a href="/starter-project-eleventy/libro-1/"> Resumen del libro 1 - 2024-02-22</a></li>
-  
-</ul>
+</div>
+
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+  <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">🔍 No se encontraron publicaciones con esos términos.</p>
+  <small>Intenta con otra palabra clave o selecciona otra categoría.</small>
+</div>
   </main>
-  <hr>
-<footer>
-  <small>Sitio hecho con <a href="https://www.11ty.dev/" target="_blank"><b><i>11ty</i></b></a></small>☠️
+
+  <footer class="site-footer">
+  <div class="site-container footer-content">
+    <div class="footer-info">
+      <p><strong>Eleventy Modern Starter</strong> — Construido con velocidad, simplicidad y elegancia.</p>
+      <p style="color: var(--text-muted); font-size: 0.85rem;">Plantilla personalizable lista para desplegar en GitHub Pages o cualquier CDN estático.</p>
+    </div>
+    <div class="footer-badge">
+      <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--success);"></span>
+      <span>100% Estático & Optimizado</span>
+    </div>
+  </div>
 </footer>
 
-  <script src="/starter-project-eleventy/js/main.js" type="module"></script>
-  
+  <script src="/js/main.js" type="module"></script>
 </body>
 </html>

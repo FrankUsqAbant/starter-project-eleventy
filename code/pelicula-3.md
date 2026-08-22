@@ -1,17 +1,17 @@
 ---
 layout: layout-post.njk
-title: Resumen del peliculas 3
-description: Descripcion del resumen del peliculas 3
+title: Blade Runner 2049 — Denis Villeneuve
+description: Una secuela magistral con una cinematografía deslumbrante de Roger Deakins que explora la identidad, los recuerdos y la humanidad.
 tags: ["blog", "peliculas"]
-date: "2024-02-22"
+date: "2024-07-20"
 ---
 
-# {{ title }}
+Dirigida por *Denis Villeneuve* como continuación del clásico de Ridley Scott de 1982, **Blade Runner 2049** es un festín visual y sonoro que expande el universo de los replicantes con una profundidad filosófica hipnótica.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+## 🌧️ Claves de la Obra
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+- **Fotografía ganadora del Óscar:** El trabajo de *Roger Deakins* con paletas de color naranja brumoso, amarillo desértico y azul neón es una clase magistral de iluminación y composición.
+- **La búsqueda del alma:** La travesía del Oficial K (Ryan Gosling) plantea preguntas conmovedoras sobre qué significa ser humano y el valor de los recuerdos elegidos.
+- **Diseño de sonido inmersivo:** Bajos estremecedores que sumergen al espectador en la soledad y densidad del futuro distópico.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
-
-![GitHub](/img/github.svg)
+> *"Todos los mejores recuerdos son de ella."* — K

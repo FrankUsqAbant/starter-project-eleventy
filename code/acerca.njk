@@ -1,13 +1,49 @@
 ---
 layout: layout-page.njk
-title: Pagina de Acerca
-description: Meta descripcion de la pagina de acerca
+title: Acerca de Este Proyecto
+description: Conoce más sobre la filosofía, tecnologías y estructura de esta plantilla base para Eleventy y GitHub Pages.
 ---
 
-<h1>{{ title }}</h1>
+<div style="max-width: 800px; margin: 0 auto;">
+  <div style="text-align: center; margin-bottom: 2.5rem;">
+    <h1>{{ title }}</h1>
+    <p style="font-size: 1.15rem; color: var(--text-secondary);">
+      Un entorno de trabajo minimalista pero potente para crear sitios estáticos modernos y eficientes.
+    </p>
+  </div>
 
-<p>
-  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam facilis vitae fugit? Adipisci est vel asperiores commodi dolorem facere aperiam libero ut accusantium? Amet alias quis quisquam eum a odit!
-</p>
+  <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 2.5rem;">
+    <h2>💡 La Filosofía Detrás de Eleventy</h2>
+    <p>
+      <b>Eleventy (11ty)</b> es un generador de sitios estáticos más simple y rápido que convierte tus archivos de plantilla (como <i>Nunjucks, Markdown, HTML, Liquid</i>) en páginas HTML puras y listas para producción.
+    </p>
+    <p>
+      A diferencia de otros frameworks que empaquetan pesados runtimes de cliente, Eleventy promueve una filosofía de <b>cero JavaScript del lado del cliente por defecto</b>, priorizando la accesibilidad, velocidad de carga y experiencia de usuario.
+    </p>
+  </div>
 
-<img src="/img/eleventy-mascots.avif" alt="Mascotas Eleventy">
+  <div class="features-grid" style="margin: 2rem 0;">
+    <div class="feature-card">
+      <div class="feature-icon">🧩</div>
+      <h3>Plantillas Nunjucks</h3>
+      <p>Modularización limpia mediante layouts, includes y macros flexibles desarrollados por Mozilla.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📁</div>
+      <h3>Datos Centralizados</h3>
+      <p>Archivos <code>_data</code> en formato JSON que alimentan tus vistas de forma dinámica en tiempo de compilación.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📦</div>
+      <h3>Despliegue GitHub Pages</h3>
+      <p>Configuración lista para exportar a la carpeta <code>docs</code> o desplegar vía GitHub Actions sin fricción.</p>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 3rem;">
+    <img src="/img/eleventy-mascots.avif" alt="Mascotas Eleventy" style="max-width: 320px; width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-md); margin: 0 auto 1.5rem;">
+    <p style="font-size: 0.9rem; color: var(--text-muted);">Las simpáticas mascotas del ecosistema Eleventy.</p>
+  </div>
+</div>

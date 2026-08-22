@@ -1,17 +1,17 @@
 ---
 layout: layout-post.njk
-title: Resumen del peliculas 2
-description: Descripcion del resumen del peliculas 2
+title: The Matrix — Las Hermanas Wachowski
+description: El clásico cyberpunk revolucionario que redefinió el cine de acción, la filosofía digital y los efectos visuales.
 tags: ["blog", "peliculas"]
-date: "2024-02-22"
+date: "2024-06-18"
 ---
 
-# {{ title }}
+Estrenada en 1999, **The Matrix** marcó un antes y un después en la cultura popular, combinando conceptos filosóficos (el Mito de la Caverna de Platón, simulacros de Baudrillard) con secuencias de acción trepidantes inspiradas en el anime y el cine de artes marciales de Hong Kong.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+## 🕶️ Elementos Revolucionarios
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+1. **El "Bullet Time":** Efecto visual pionero utilizando un arreglo de cámaras fotográficas sincronizadas para congelar el movimiento en 360 grados.
+2. **La metáfora de la píldora roja vs. píldora azul:** Una interrogante eterna sobre la comodidad de la ilusión frente a la crudeza de la verdad.
+3. **Estética ciberpunk impecable:** Gabardinas negras, código verde cayendo en cascada y una atmósfera oscura inconfundible.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
-
-![GitHub](/img/github.svg)
+> *"No puedo decirte quién eres, sólo puedo mostrarte la puerta. Eres tú quien tiene que atravesarla."* — Morfeo

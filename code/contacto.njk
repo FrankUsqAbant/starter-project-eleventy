@@ -1,13 +1,79 @@
 ---
 layout: layout-page.njk
-title: Pagina de Contacto
-description: Meta descripcion de la pagina de contacto
+title: Contáctanos
+description: Ponte en contacto con nosotros para colaborar o resolver dudas sobre el desarrollo de sitios con Eleventy.
 ---
 
-<h1>{{ title }}</h1>
+<div style="text-align: center; margin-bottom: 3rem;">
+  <h1>{{ title }}</h1>
+  <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+    ¿Tienes alguna pregunta, idea de proyecto o sugerencia para esta plantilla? Envíanos un mensaje.
+  </p>
+</div>
 
-<p>
-  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam facilis vitae fugit? Adipisci est vel asperiores commodi dolorem facere aperiam libero ut accusantium? Amet alias quis quisquam eum a odit!
-</p>
+<div class="contact-grid">
+  <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-md);">
+    <h2 style="font-size: 1.35rem; margin-bottom: 1rem;">Envíanos un Mensaje</h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name" class="form-label">Nombre Completo</label>
+        <input type="text" id="name" class="form-control" placeholder="Ej. Frank Abanto" required>
+      </div>
 
-<img src="/img/eleventy-grumpy.avif" alt="Grumpy Eleventy">
+      <div class="form-group">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" id="email" class="form-control" placeholder="tu@correo.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject" class="form-label">Asunto</label>
+        <input type="text" id="subject" class="form-control" placeholder="Consulta sobre Eleventy" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="form-label">Mensaje</label>
+        <textarea id="message" class="form-control" placeholder="Cuéntanos más detalles..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">
+        <span>Enviar Mensaje</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-md);">
+      <h2 style="font-size: 1.35rem; margin-bottom: 1rem;">Información del Ecosistema</h2>
+      <p style="margin-bottom: 1rem;">
+        Esta plantilla fue diseñada con buenas prácticas de arquitectura estática moderna. Puedes usarla libremente para tus proyectos personales o comerciales.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 1.25rem;">🐙</span>
+          <div>
+            <strong style="display: block; font-size: 0.95rem;">GitHub Repository</strong>
+            <a href="https://github.com/FrankUsqAbant/starter-project-eleventy" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem;">FrankUsqAbant/starter-project-eleventy</a>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 1.25rem;">🌐</span>
+          <div>
+            <strong style="display: block; font-size: 0.95rem;">Sitio Oficial de Eleventy</strong>
+            <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem;">11ty.dev</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem; text-align: center;">
+      <img src="/img/eleventy-grumpy.avif" alt="Grumpy 11ty" style="max-width: 140px; margin: 0 auto 0.75rem; border-radius: var(--radius-sm);">
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">"Simple, sin complicaciones ni sobrecargas."</p>
+    </div>
+  </div>
+</div>

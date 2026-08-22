@@ -1,8 +1,8 @@
-    <nav class="menu">
-      <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/acerca">Acerca</a></li>
-        <li><a href="/contacto">Contacto</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </nav>
+<nav class="nav-menu">
+  <ul class="nav-links">
+    <li><a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">Inicio</a></li>
+    <li><a href="/blog" class="nav-link {% if '/blog' in page.url %}active{% endif %}">Blog</a></li>
+    <li><a href="/acerca" class="nav-link {% if '/acerca' in page.url %}active{% endif %}">Acerca</a></li>
+    <li><a href="/contacto" class="nav-link {% if '/contacto' in page.url %}active{% endif %}">Contacto</a></li>
+  </ul>
+</nav>

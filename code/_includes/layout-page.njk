@@ -3,20 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <meta name="description" content={{ description }}>
+  <title>{{ title }} — Eleventy Starter</title>
+  <meta name="description" content="{{ description }}">
   <link rel="icon" href="/img/favicon.png">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="/css/styles.css">
 
+  <!-- Script temprano para evitar flash de tema -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
 </head>
 <body>
   {% include "header.njk" %}
-  <main>
+
+  <main class="site-container">
     {{ content | safe }}
   </main>
+
   {% include "footer.njk" %}
 
   <script src="/js/main.js" type="module"></script>
-  
 </body>
 </html>

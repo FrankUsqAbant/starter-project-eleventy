@@ -1,17 +1,20 @@
 ---
 layout: layout-post.njk
-title: Resumen del libro 1
-description: Descripcion del resumen del libro 1
+title: El Arte de la Guerra — Sun Tzu
+description: Claves estratégicas sobre el liderazgo, la preparación mental y la toma de decisiones aplicadas al desarrollo de software y la vida.
 tags: ["blog", "libros"]
 date: "2024-02-22"
 ---
 
-# {{ title }}
+El tratado milenario de *Sun Tzu* trasciende los conflictos bélicos tradicionales y se convierte en un manual esencial sobre estrategia, adaptabilidad y resolución inteligente de problemas.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+## 🎯 Puntos Clave del Libro
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+1. **Conócete a ti mismo y a tu entorno:** La base de cualquier proyecto exitoso radica en entender nuestras fortalezas, limitaciones y los requisitos del problema antes de escribir la primera línea de código.
+2. **La victoria se asegura antes de la batalla:** La planificación cuidadosa y la arquitectura sólida previenen horas interminables de depuración innecesaria.
+3. **Adaptabilidad como el agua:** Ningún plan sobrevive intacto al contacto con la realidad. Los mejores desarrolladores y estrategas ajustan su rumbo según las circunstancias.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+> *"La suprema excelencia consiste en quebrar la resistencia del enemigo sin luchar."* — Sun Tzu
 
-![Eleventy](/img/eleventy.svg)
+### Conclusión y Aplicación Práctica
+En el desarrollo de software moderno con herramientas como **Eleventy**, este principio se traduce en mantener una arquitectura simple y limpia: resolver con HTML estático y diseño eficiente antes de añadir complejidad innecesaria.

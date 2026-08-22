@@ -1,28 +1,107 @@
 ---
 layout: layout-page.njk
-title: Pagina de inicio
-description: Meta descripcion de la pagina de inicio
+title: Inicio
+description: Starter project moderno y ultra-rápido para crear sitios web estáticos con Eleventy (11ty) y desplegar en GitHub Pages.
 ---
 
-<h1>{{ title }}</h1>
+<section class="hero-section">
+  <div class="hero-pill">
+    <span>⚡ Generador de Sitios Estáticos Ultrarrápido</span>
+  </div>
 
-<p>
-  Hola, este es un <i>starter porject</i> minimalista para crear sitios estaticos con <b><i>11ty</i></b> y desplegarlos en <i>GitHub Pages</i>.
-</p>
-<div>
-  <img src="/img/eleventy.svg" alt="Eleventy">
-  <h2>+</h2>
-  <img src="/img/github.svg" alt="GitHub">
-</div>
-<hr>
-<h2>{{ site.message }}</h2>
-<p>
-  Para sacarle mayor provecho a este <i>starter project</i>, te sugiero revisar los siguientes enlaces:
-</p>
-<ul>
-  {% for link in site.linksDoc %}
-    <li>
-      <a href="{{ link.url }}" target="_blank">{{ link.text | safe }}</a>
-    </li>
-  {% endfor %}
-</ul>
+  <h1 class="hero-title">
+    Crea sitios web modernos, ligeros y elegantes con <span class="gradient-text">Eleventy (11ty)</span>
+  </h1>
+
+  <p class="hero-subtitle">
+    Una plantilla base estructurada con arquitectura de componentes, soporte de Markdown, Nunjucks, modo oscuro/claro y despliegue continuo en GitHub Pages.
+  </p>
+
+  <div class="hero-actions">
+    <a href="/blog" class="btn btn-primary">
+      <span>Explorar Artículos del Blog</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+    <a href="/acerca" class="btn btn-secondary">
+      <span>Conocer la Arquitectura</span>
+    </a>
+  </div>
+
+  <div class="hero-showcase">
+    <div class="showcase-item">
+      <div class="showcase-icon">
+        <img src="/img/eleventy.svg" alt="11ty Icon">
+      </div>
+      <div class="showcase-text">
+        <strong>Eleventy 2.0+</strong>
+        <span>Cero JavaScript por defecto</span>
+      </div>
+    </div>
+    
+    <div class="showcase-item">
+      <div class="showcase-icon">
+        <span style="font-size: 1.5rem;">🎨</span>
+      </div>
+      <div class="showcase-text">
+        <strong>CSS Puro & Fluido</strong>
+        <span>Glassmorphism & Temas</span>
+      </div>
+    </div>
+
+    <div class="showcase-item">
+      <div class="showcase-icon">
+        <img src="/img/github.svg" alt="GitHub Icon">
+      </div>
+      <div class="showcase-text">
+        <strong>GitHub Pages Ready</strong>
+        <span>Despliegue estático automatizado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="margin: 4rem 0 2rem;">
+  <h2 style="text-align: center; margin-bottom: 0.5rem;">¿Por qué elegir esta arquitectura?</h2>
+  <p style="text-align: center; max-width: 600px; margin: 0 auto 2.5rem;">Diseñado para ofrecer la máxima puntuación de rendimiento en Lighthouse con una experiencia de desarrollo limpia.</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🚀</div>
+      <h3>Rendimiento Extremo</h3>
+      <p>Generación de páginas HTML estáticas puras sin sobrecargas de frameworks pesados, garantizando tiempos de carga casi instantáneos.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🌓</div>
+      <h3>Tema Claro y Oscuro</h3>
+      <p>Alternador de tema intuitivo con almacenamiento persistente en el navegador y respeto automático de las preferencias del sistema operativo.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📝</div>
+      <h3>Contenido en Markdown</h3>
+      <p>Escribe tus publicaciones y páginas directamente en Markdown con metadatos Frontmatter y categorización automática por colecciones.</p>
+    </div>
+  </div>
+</section>
+
+<section style="margin: 4rem 0 2rem;">
+  <h2>{{ site.message }}</h2>
+  <p>Recursos y enlaces recomendados para dominar el ecosistema de 11ty y Nunjucks:</p>
+
+  <div class="doc-links-grid">
+    {% for link in site.linksDoc %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="doc-link-card">
+        <span>{{ link.text | safe }}</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+    {% endfor %}
+  </div>
+</section>

@@ -1,20 +1,72 @@
 ---
 layout: layout-page.njk
-title: Pagina de Blog
-description: Meta descripcion de la pagina de blog
+title: Blog & Artículos
+description: Explora publicaciones, reseñas de libros y recomendaciones de películas generadas con colecciones de Eleventy.
 ---
 
-<h1>{{ title }}</h1>
-<h2>Articulos del blog ordenados ascendentemente</h2>
-<ul>
-  {% for post in collections.blog %}
-    <li><a href="{{ post.url }}"> {{ post.data.title }} - {{ post.data.date }}</a></li>
-  {% endfor %}
-</ul>
-<hr />
-<h2>Artículos del blog ordenados descendentemente</h2>
-<ul>
+<div class="blog-header">
+  <h1>{{ title }}</h1>
+  <p>Explora nuestras publicaciones organizadas por categorías con buscador y filtros en tiempo real.</p>
+</div>
+
+<!-- Barra interactiva de Búsqueda y Filtros -->
+<div class="blog-controls">
+  <div class="search-wrapper">
+    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input type="text" id="blog-search" class="search-input" placeholder="Buscar por título o contenido...">
+  </div>
+
+  <div class="category-pills">
+    <button class="cat-btn active" data-category="all">Todos ({{ collections.blog.length }})</button>
+    <button class="cat-btn" data-category="libros">Libros ({{ collections.libros.length }})</button>
+    <button class="cat-btn" data-category="peliculas">Películas ({{ collections.peliculas.length }})</button>
+  </div>
+</div>
+
+<!-- Grid de Artículos -->
+<div class="posts-grid" id="posts-container">
   {% for post in collections.blog | reverse %}
-    <li><a href="{{ post.url }}"> {{ post.data.title }} - {{ post.data.date }}</a></li>
+    <div class="post-card post-card-item" 
+         data-title="{{ post.data.title | lower }}" 
+         data-desc="{{ post.data.description | default('') | lower }}"
+         data-category="{% if 'libros' in post.data.tags %}libros{% elif 'peliculas' in post.data.tags %}peliculas{% else %}general{% endif %}">
+      
+      <div>
+        <div class="post-meta">
+          {% if "libros" in post.data.tags %}
+            <span class="post-tag tag-libros">Libro</span>
+          {% elif "peliculas" in post.data.tags %}
+            <span class="post-tag tag-peliculas">Película</span>
+          {% else %}
+            <span class="post-tag tag-libros">Post</span>
+          {% endif %}
+          <span class="post-date">{{ post.data.date | default("2024") }}</span>
+        </div>
+
+        <h3>
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </h3>
+
+        <p>{{ post.data.description | default("Lee la reseña completa y detalles clave sobre este título en la publicación.") }}</p>
+      </div>
+
+      <div class="post-card-footer">
+        <a href="{{ post.url }}" style="display: flex; align-items: center; gap: 0.4rem;">
+          <span>Leer publicación</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
   {% endfor %}
-</ul>
+</div>
+
+<div id="no-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+  <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">🔍 No se encontraron publicaciones con esos términos.</p>
+  <small>Intenta con otra palabra clave o selecciona otra categoría.</small>
+</div>

@@ -3,46 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-  <meta name="description" content={{ description }}>
+  <title>{{ title }} — Eleventy Starter</title>
+  <meta name="description" content="{{ description }}">
   <link rel="icon" href="/img/favicon.png">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="/css/styles.css">
 
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
 </head>
 <body>
+  <!-- Barra de progreso de lectura -->
+  <div id="reading-progress" class="reading-progress-bar"></div>
+
   {% include "header.njk" %}
-  <main>
-    {{ content | safe }}
+
+  <main class="site-container">
+    <div style="margin-bottom: 1.5rem;">
+      <a href="/blog" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.9rem;">
+        ← Volver al Blog
+      </a>
+    </div>
+
+    <div class="post-layout-container">
+      <article class="post-article">
+        <header style="margin-bottom: 2rem;">
+          <div class="post-meta">
+            {% if "libros" in tags %}
+              <span class="post-tag tag-libros">Libro</span>
+            {% elif "peliculas" in tags %}
+              <span class="post-tag tag-peliculas">Película</span>
+            {% else %}
+              <span class="post-tag tag-libros">Artículo</span>
+            {% endif %}
+            <span class="post-date">{{ date | default("Publicación") }}</span>
+          </div>
+          <h1>{{ title }}</h1>
+          {% if description %}
+            <p style="font-size: 1.15rem; color: var(--text-secondary); margin-top: 0.5rem;">{{ description }}</p>
+          {% endif %}
+        </header>
+
+        <div class="post-body">
+          {{ content | safe }}
+        </div>
+      </article>
+
+      <aside class="sidebar-sticky">
+        <div class="sidebar-card">
+          <h3>
+            <span>📚</span> Libros Destacados
+          </h3>
+          <ul class="sidebar-list">
+            {% for article in collections.libros %}
+              <li>
+                <a href="{{ article.url }}">{{ article.data.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>
+            <span>🎬</span> Películas
+          </h3>
+          <ul class="sidebar-list">
+            {% for article in collections.peliculas %}
+              <li>
+                <a href="{{ article.url }}">{{ article.data.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </aside>
+    </div>
   </main>
-  <hr>
-  <aside>
-    <h2>Categorias</h2>
-    <h3>Libros</h3>
-    <ul>
-      {% for article in collections.libros %}
-      <li>
-        <a href="{{ article.url }}">
-          {{ article.data.title }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-    <h3>Peliculas</h3>
-    <ul>
-      {% for article in collections.peliculas %}
-      <li>
-        <a href="{{ article.url }}">
-          {{ article.data.title }}
-        </a>
-      </li>
-      {% endfor %}
 
-    </ul>
-
-  </aside>
   {% include "footer.njk" %}
 
   <script src="/js/main.js" type="module"></script>
-  
 </body>
 </html>

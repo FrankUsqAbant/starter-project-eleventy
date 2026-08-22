@@ -1,17 +1,20 @@
 ---
 layout: layout-post.njk
-title: Resumen del pelicula 1
-description: Descripcion del resumen del pelicula 1
+title: Interstellar — Christopher Nolan
+description: Una odisea visual y emocional sobre la física cuántica, el tiempo, los agujeros negros y la supervivencia humana.
 tags: ["blog", "peliculas"]
-date: "2024-02-22"
+date: "2024-05-04"
 ---
 
-# {{ title }}
+Dirigida por *Christopher Nolan* y con banda sonora inolvidable de *Hans Zimmer*, **Interstellar** es una obra cumbre del cine de ciencia ficción que combina rigor científico con un profundo corazón emocional.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+## 🌌 Aspectos Destacados
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+- **Precisión científica:** Colaboración directa con el físico teórico *Kip Thorne* para simular por primera vez la apariencia realista del agujero negro *Gargantua*.
+- **La dimensión del tiempo:** La relatividad general convertida en el recurso dramático más poderoso y desgarrador del relato.
+- **La banda sonora:** El órgano de tubos de Zimmer aporta una sensación de inmensidad cósmica y urgencia constante.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloremque rem similique asperiores voluptas inventore vero illum eveniet sunt, aut velit incidunt laborum modi atque excepturi praesentium ut veritatis. Facilis.
+> *"El amor es lo único que somos capaces de percibir que trasciende las dimensiones del tiempo y del espacio."* — Brand
 
-![GitHub](/img/github.svg)
+### Veredicto
+Una experiencia cinematográfica imprescindible que desafía la mente y conmueve profundamente.
