@@ -5,10 +5,17 @@
 </p>
 
 <p align="center">
+  <a href="https://frankusqabant.github.io/starter-project-eleventy/">
+    <img src="https://img.shields.io/badge/Demo_en_Vivo-Sitio_Web-10b981?style=for-the-badge&logo=githubpages&logoColor=white" alt="Demo en Vivo">
+  </a>
   <img src="https://img.shields.io/badge/Eleventy-v2.0+-5c46eb?style=for-the-badge&logo=eleventy" alt="11ty">
   <img src="https://img.shields.io/badge/Diseño-Modern_CSS-00F5D4?style=for-the-badge&logo=css3&logoColor=black" alt="Modern CSS">
   <img src="https://img.shields.io/badge/Temas-Dark_%26_Light-8b5cf6?style=for-the-badge" alt="Temas">
   <img src="https://img.shields.io/badge/Imágenes-WebP_Ultra_Fast-10b981?style=for-the-badge" alt="WebP Ready">
+</p>
+
+<p align="center">
+  🌐 <b>Sitio Web Desplegado:</b> <a href="https://frankusqabant.github.io/starter-project-eleventy/">https://frankusqabant.github.io/starter-project-eleventy/</a>
 </p>
 
 ---
@@ -29,7 +36,7 @@ Una plantilla base moderna, ultraligera y lista para producción, creada con **E
 
 ---
 
-## 🚀 Inicio Rápido
+## 🚀 Inicio Rápido (Desarrollo)
 
 ```bash
 # 1. Clonar e ingresar
@@ -39,11 +46,9 @@ cd starter-project-eleventy
 # 2. Instalar dependencias
 npm install
 
-# 3. Iniciar servidor local (puerto 7777)
+# 3. Iniciar servidor de desarrollo
 npm run start
 ```
-
-Visita **[http://localhost:7777](http://localhost:7777)** en tu navegador.
 
 ---
 
