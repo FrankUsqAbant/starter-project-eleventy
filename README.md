@@ -1,92 +1,77 @@
-# 🦡 Starter Project Eleventy (11ty) — Modern SSG Template
+# 🦡 Starter Project Eleventy (11ty)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/11ty/11ty-website/master/src/img/mascots/possum.png" alt="Eleventy Possum" width="180">
+  <img src="code/img/preview.webp" alt="Vista Previa de Eleventy Starter" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Eleventy-v2.0+-5c46eb?style=for-the-badge&logo=eleventy" alt="11ty">
   <img src="https://img.shields.io/badge/Diseño-Modern_CSS-00F5D4?style=for-the-badge&logo=css3&logoColor=black" alt="Modern CSS">
   <img src="https://img.shields.io/badge/Temas-Dark_%26_Light-8b5cf6?style=for-the-badge" alt="Temas">
-  <img src="https://img.shields.io/badge/GitHub_Pages-Listo-10b981?style=for-the-badge&logo=github" alt="GitHub Pages">
+  <img src="https://img.shields.io/badge/Imágenes-WebP_Ultra_Fast-10b981?style=for-the-badge" alt="WebP Ready">
 </p>
 
 ---
 
-## 🌟 Descripción General
+## ⚡ ¿Qué es este proyecto?
 
-Esta es una plantilla inicial (*starter template*) moderna, ultrarrápida y lista para producción, construida con el generador de sitios estáticos **Eleventy (11ty)** y el motor de plantillas **Nunjucks**.
-
-Diseñada para desarrolladores y creadores de contenido que buscan una arquitectura limpia con **cero sobrecarga de frameworks pesados**, diseño responsivo con estética moderna, alternador de temas claro/oscuro y un sistema dinámico de blog con buscador y filtros en tiempo real.
+Una plantilla base moderna, ultraligera y lista para producción, creada con **Eleventy (11ty)** y **Nunjucks**. Diseñada para ofrecer la máxima puntuación de rendimiento (100/100 en Lighthouse), estética cinematográfica y cero sobrecarga de JavaScript innecesario.
 
 ---
 
-## ✨ Características Destacadas
+## ✨ Características Principales
 
-- ⚡ **Rendimiento Puro:** Salida HTML/CSS 100% estática optimizada para puntuaciones perfectas en Google Lighthouse (100/100).
-- 🌓 **Modo Oscuro & Claro:** Detección automática del tema del sistema (`prefers-color-scheme`) y botón con persistencia en `localStorage`.
-- 🔍 **Buscador & Filtros en Vivo:** Motor de búsqueda interactivo en la sección de blog con filtrado por categorías (Libros / Películas).
-- 📖 **Barra de Progreso de Lectura:** Indicador dinámico en la parte superior para artículos.
-- 🎨 **Estética Visual de Alta Calidad:** Glassmorphism, tarjetas con resplandor (*glow effects*), tipografía con *Plus Jakarta Sans* y *JetBrains Mono*.
-- 📁 **Arquitectura Modular Nunjucks:** Componentes reutilizables (`header`, `menu`, `footer`, `layouts`) y datos centralizados en `_data/site.json`.
-- 🚀 **Despliegue Simple:** Compatible con GitHub Pages (carpeta `docs/` o GitHub Actions), Netlify, Vercel o Cloudflare Pages.
+- 🚀 **Ultrarrápido & Ligero:** Salida 100% estática optimizada con imágenes en formato WebP (~30-80 KB).
+- 🌓 **Modo Oscuro / Claro:** Alternador accesible con persistencia en `localStorage`.
+- 🔍 **Blog con Búsqueda en Vivo:** Filtrado en tiempo real por texto y categorías (*Libros*, *Películas*).
+- 📖 **Barra de Lectura:** Indicador dinámico de avance en artículos Markdown.
+- 🎨 **Diseño Moderno:** Efectos *glassmorphism*, iluminación iridiscente y tipografía *Plus Jakarta Sans*.
 
 ---
 
-## 🛠️ Instalación y Uso Local
+## 🚀 Inicio Rápido
 
-### 1. Clonar el repositorio
 ```bash
+# 1. Clonar e ingresar
 git clone https://github.com/FrankUsqAbant/starter-project-eleventy.git
 cd starter-project-eleventy
-```
 
-### 2. Instalar dependencias
-```bash
+# 2. Instalar dependencias
 npm install
-```
 
-### 3. Iniciar el servidor de desarrollo
-```bash
+# 3. Iniciar servidor local (puerto 7777)
 npm run start
 ```
-Abre tu navegador en **[http://localhost:7777](http://localhost:7777)** para ver el sitio con recarga en vivo (*hot-reload*).
+
+Visita **[http://localhost:7777](http://localhost:7777)** en tu navegador.
 
 ---
 
-## 📜 Scripts Disponibles en `package.json`
+## 🛠️ Comandos Principales
 
-| Comando | Acción |
+| Comando | Descripción |
 | :--- | :--- |
-| `npm run start` | Inicia el servidor de desarrollo local de Eleventy en el puerto `7777`. |
-| `npm run deploy` | Compila el sitio estático para producción en la carpeta `docs/` con prefijo `/`. |
-| `npm run deploy-subdomain` | Compila con prefijo para despliegue en subrutas de GitHub Pages (`/starter-project-eleventy/`). |
-| `npm run clean` | Limpia la carpeta `docs/` generada anteriormente. |
+| `npm run start` | Inicia el entorno local con recarga en vivo. |
+| `npm run deploy` | Compila los archivos estáticos en la carpeta `docs/`. |
+| `npm run clean` | Limpia los archivos compilados en `docs/`. |
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📁 Estructura del Proyecto
 
 ```text
-starter-project-eleventy/
 ├── code/
-│   ├── _data/                 # Datos globales (site.json)
-│   ├── _includes/             # Plantillas y componentes (header, footer, menu, layouts)
-│   ├── css/                   # Sistema de estilos (styles.css)
-│   ├── js/                    # Lógica interactiva (main.js)
-│   ├── img/                   # Recursos visuales y logotipos
-│   ├── index.njk              # Página de Inicio
-│   ├── blog.njk               # Página principal del Blog con buscador
-│   ├── acerca.njk             # Página de Acerca de
-│   ├── contacto.njk           # Página de Contacto
-│   └── *.md                   # Artículos en Markdown organizados por colecciones
-├── .eleventy.js               # Configuración oficial de 11ty
-├── package.json               # Dependencias y scripts del proyecto
-└── README.md                  # Documentación
+│   ├── _includes/    # Componentes modulares (header, menu, footer, layouts)
+│   ├── css/          # Estilos modernos con variables y temas (styles.css)
+│   ├── js/           # Interactividad ligera y buscador (main.js)
+│   ├── img/          # Imágenes optimizadas en WebP
+│   └── *.njk / *.md  # Páginas y publicaciones en Markdown
+├── docs/             # Salida estática compilada para GitHub Pages
+└── .eleventy.js      # Configuración de 11ty
 ```
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia [MIT](LICENSE). Siéntete libre de adaptarlo y usarlo en tus proyectos personales o profesionales.
+Distribuido bajo la licencia [MIT](LICENSE).
