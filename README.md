@@ -1,7 +1,9 @@
 # 🦡 Starter Project Eleventy (11ty)
 
 <p align="center">
-  <img src="code/img/preview.webp" alt="Vista Previa de Eleventy Starter" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+  <a href="https://frankusqabant.github.io/starter-project-eleventy/" target="_blank" rel="noopener noreferrer">
+    <img src="code/img/preview.webp" alt="Vista Previa de Eleventy Starter — Clic para abrir el sitio en vivo" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+  </a>
 </p>
 
 <p align="center">
